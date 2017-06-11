@@ -70,7 +70,7 @@ def processing():
 #    r.headers['Content-Type'] = 'application/json; charset=utf-8'
 #    return r
 
-
+"""
 def processRequest(req):
     if req.get("result").get("action") != "yahooWeatherForecast":
         return {}
@@ -133,7 +133,7 @@ def makeWebhookResult(data):
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
     }
-
+"""
 
 #if __name__ == '__main__':
 #    port = int(os.getenv('PORT', 5000))
