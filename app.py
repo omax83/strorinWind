@@ -134,6 +134,8 @@ def makeWebhookResult(data):
         "source": "apiai-weather-webhook-sample"
     }
 """
+if __name__ == '__main__':
+    app.run()
 
 #if __name__ == '__main__':
 #    port = int(os.getenv('PORT', 5000))
