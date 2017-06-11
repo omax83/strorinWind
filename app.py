@@ -18,7 +18,6 @@ from flask import make_response
 # Flask app should start in global layout
 app = Flask(__name__)
 
-
-@app.route('/', methods=['POST'])
-def processing():
-    return '13507e18'
+@app.route('/')
+def hello_world():
+    return 'Hello from Flask!'
