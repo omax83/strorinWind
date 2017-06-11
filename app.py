@@ -1,22 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from __future__ import print_function
-from future.standard_library import install_aliases
-install_aliases()
+#from __future__ import print_function
+#from future.standard_library import install_aliases
+#install_aliases()
 
-from urllib.parse import urlparse, urlencode
-from urllib.request import urlopen, Request
-from urllib.error import HTTPError
+#from urllib.parse import urlparse, urlencode
+#from urllib.request import urlopen, Request
+#from urllib.error import HTTPError
 
 from settings import *
 import messageHandler
 
 import json
-import os
+#import os
 
 from flask import Flask
 from flask import request
-from flask import make_response
+#from flask import make_response
 import vk
 
 # Flask app should start in global layout
@@ -55,20 +55,20 @@ def processing():
 #def processing():
 #    return '13507e18'
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
-    req = request.get_json(silent=True, force=True)
-
-    print("Request:")
-    print(json.dumps(req, indent=4))
-
-    res = processRequest(req)
-
-    res = json.dumps(res, indent=4)
-    # print(res)
-    r = make_response(res)
-    r.headers['Content-Type'] = 'application/json; charset=utf-8'
-    return r
+#@app.route('/webhook', methods=['POST'])
+#def webhook():
+#    req = request.get_json(silent=True, force=True)
+##
+#    print("Request:")
+#    print(json.dumps(req, indent=4))
+#
+#    res = processRequest(req)
+#
+#    res = json.dumps(res, indent=4)
+#    # print(res)
+#    r = make_response(res)
+#    r.headers['Content-Type'] = 'application/json; charset=utf-8'
+#    return r
 
 
 def processRequest(req):
@@ -135,9 +135,9 @@ def makeWebhookResult(data):
     }
 
 
-if __name__ == '__main__':
-    port = int(os.getenv('PORT', 5000))
-    
-    print("Starting app on port %d" % port)
-
-    app.run(debug=False, port=port, host='0.0.0.0')
+#if __name__ == '__main__':
+#    port = int(os.getenv('PORT', 5000))
+#    
+#    print("Starting app on port %d" % port)
+#
+#    app.run(debug=False, port=port, host='0.0.0.0')
