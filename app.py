@@ -22,6 +22,10 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello from Flask!'
 
+@app.route('/', methods=['POST'])
+def processing():
+    return '13507e18'
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
