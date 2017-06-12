@@ -142,9 +142,10 @@ def makeWebhookResult(data):
 #    app.run(debug=False, port=environ.get("PORT", 5000))
     
 if __name__ == '__main__':
-    from os import environ
-#    port = int(os.getenv('PORT', 5000))
-    port=environ.get("PORT", 5000)    
+#    from os import environ
+    import os
+    port = int(os.getenv('PORT', 5000))
+#    port=environ.get("PORT", 5000)    
     print("Starting app on port %d" % port)
 
     app.run(debug=True, port=port, host='0.0.0.0')
